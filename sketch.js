@@ -29,7 +29,7 @@ function draw() {
   circle(posX, posY, 50);
 
   fill(255, 0, 0);
-  rect(windowWidth * 0.5, windowHeight - margen, windowHeight * 0.8, esp);
+  r ect(windowWidth * 0.5, windowHeight - margen, windowHeight * 0.8, esp);
 
   function actualizar() {
     velY += acel;
