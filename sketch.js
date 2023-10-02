@@ -35,7 +35,7 @@ function draw() {
     velY += acel;
     posY += velY;
 
-    if (posY > piso - rad) {
+    if (posY >= piso - rad) {
       posy = piso - rad;
       velY *= -1;
     }
