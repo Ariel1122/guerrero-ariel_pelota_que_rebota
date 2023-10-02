@@ -2,15 +2,15 @@ let posX, posY, diam, rad;
 let esp = 34;
 let margen = 50;
 let piso;
-let velY = 5;
+let velY = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   posX = windowWidth / 2;
-  posY = 100;
+  posY = windowHeight / 2;
   rectMode(CENTER);
   piso = windowHeight - margen - esp / 2;
-  frameRate(10);
+  // frameRate(10);
   diam = 50;
   rad = diam / 2;
 }
@@ -19,10 +19,16 @@ function draw() {
   background(0, 200, 150, 70);
   noStroke();
 
+  velY += 1;
   posY += velY;
   if (posY > piso - rad) {
     velY *= -1;
   }
+
+  // if (posY > 1) {
+  //   vely /= +1;
+  //   posY = margen / 2;
+  // }
 
   fill(255);
   circle(posX, posY, 50);
