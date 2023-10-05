@@ -18,7 +18,6 @@ function setup() {
   // diam = 50;
   velY = 0;
 }
-
 function draw() {
   background(0, 200, 150, 70);
 
@@ -29,13 +28,15 @@ function draw() {
   circle(posX, posY, 50);
 
   fill(255, 0, 0);
-  r ect(windowWidth * 0.5, windowHeight - margen, windowHeight * 0.8, esp);
+  // rect(windowWidth * 0.5, windowHeight - margen, windowHeight * 0.8, esp);
+  rect(windowWidth / 2, windowHeight - margen, windowHeight, esp);
 
   function actualizar() {
     velY += acel;
     posY += velY;
 
     if (posY >= piso - rad) {
+      print("ya");
       posy = piso - rad;
       velY *= -1;
     }
